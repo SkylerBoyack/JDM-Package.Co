@@ -1,0 +1,75 @@
+.Login{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/10/50386/01252c960fc961a7bc6c8cbd51c2d1d8.jpg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+
+.Login-container{
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.55);
+    /* background-image: linear-gradient(97deg, #F7EBE8 , #444140 ); */
+    width: 20vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.auth-input-box  {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+input{
+  margin-bottom: 34px;
+}
+
+#inputText{
+  font: 20px/20px Arial,Verdana,sans-serif;
+}
+
+.auth-button-container {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  height: 35px;
+  margin-left: 10px;
+  border: none;
+ } 
+
+ .auth-button{
+   margin-left: 15px;
+   margin-right: 25px;
+  background-color: rgba(0, 0, 0, 0.05);
+ }
+
+ #loginReg{
+   color: white;
+   font: 15px/15px Arial,Verdana,sans-serif;
+ }
+ 
+ #CreateOr{
+  font: 30px/30px Arial,Verdana,sans-serif;
+  margin-bottom: 30px;
+ }
+
+
+ @media(max-width: 992px){
+  .Login{
+    background-image: linear-gradient(99deg, #FFFFFF, #4A525A 30%, #24272B 73%, #07070A);
+
+  }
+  .Login-container{
+    width: fit-content;
+    height: fit-content;
+  }
+}

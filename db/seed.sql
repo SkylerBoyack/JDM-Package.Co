@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS users
 DROP TABLE IF EXISTS cart
 DROP TABLE IF EXISTS packages
-DROP TABLE IF EXISTS packages_cart_junction
+DROP TABLE IF EXISTS package_cart_junction
 
 
 CREATE TABLE users (

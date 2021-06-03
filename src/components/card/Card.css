@@ -1,0 +1,27 @@
+#hamburger{
+    border: 0px;
+    background-color: white;
+}
+
+
+#ham-icon{
+    cursor: pointer;
+}
+
+.menu{
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    right: 0px;
+}
+
+.cardText{
+    color: black;
+    font: 25px/25px Arial,Verdana,sans-serif;
+    
+}
+
+.cardText:hover, .cardText:focus {
+    color:purple;
+}
+
