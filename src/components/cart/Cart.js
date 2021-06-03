@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useSelector, useDispatch} from 'react-redux'
 import {setCart} from '../../redux/cartReducer'
 import '../cart/Cart.css'
+import {Link} from 'react-router-dom'
 
 const Cart = (props) => {
  const {cart} = useSelector((store) => store.cartReducer)
@@ -53,7 +54,7 @@ const Cart = (props) => {
 
     return(
         <div id='cart-container'> 
-        <h1  id="cart-text">Items In Cart</h1>
+        <h1  id="cart-text">Your Cart</h1>
         <div className="cart-items">
              {cart.map((item) => {
                  return(
@@ -67,6 +68,7 @@ const Cart = (props) => {
                         <button id="cart-button" onClick={() => handleChangeQty(item.package_id, item.quantity +1)}>+</button>
                         </div>
                         <button id="cart-button" onClick={() => handeDeleteFromCart(item.package_id)}>Remove Package</button>
+                        <Link to='/checkout'><h3 className="checkout-link">Checkout</h3></Link>
                     </div>
                 </div>
                  )

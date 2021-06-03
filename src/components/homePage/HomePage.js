@@ -49,8 +49,8 @@ const HomePage = () => {
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnSri5rb7NaodOBtAAUfcqy5Z1ZTqaVGnH5i12IcXYm37sOhviWSwAZRFnFKsgqvRP-8s&usqp=CAU" alt="Stickers"/>
           </div>
           <div className='exampImg'>
-               <img src="https://cdn11.bigcommerce.com/s-79xyvl/images/stencil/500x659/products/30986/132074/5__46766.1602171263.jpg?c=2"/>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA6w82NLgXw9QC9M-8nKccV75ELsB4u41chL5DfYFEtPBxE9oZRVmKnrtoYIuc0eTzgzyYUz0&usqp=CAc" alt="floorMats"/>
+               <img src="https://cdn11.bigcommerce.com/s-79xyvl/images/stencil/500x659/products/30986/132074/5__46766.1602171263.jpg?c=2" alt='floormats'/>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA6w82NLgXw9QC9M-8nKccV75ELsB4u41chL5DfYFEtPBxE9oZRVmKnrtoYIuc0eTzgzyYUz0&usqp=CAc" alt="steering-wheel"/>
               <img src="https://cdn.shopify.com/s/files/1/0799/1879/products/IMG_1998_1024x.jpg?v=1613893569g" alt="Tsurikawa"/>
               <img src="http://cdn.shopify.com/s/files/1/0280/5484/products/C-291350-ORANGE-500x500_0_600x.jpg?v=1598297921" alt='shiftKnob'/>
               <img src="https://i.pinimg.com/736x/0e/91/9f/0e919f6d307080e71a1815be633ed102.jpg" alt="Sticker"/>

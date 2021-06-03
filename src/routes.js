@@ -3,6 +3,8 @@ import Auth from './components/auth/Auth'
 import Cart from './components/cart/Cart'
 import homePage from './components/homePage/HomePage'
 import Packages from './components/packages/Packages'
+import Checkout from './components/stripe/Checkout'
+
 
 
 export default (
@@ -11,5 +13,6 @@ export default (
         <Route path='/auth' component={Auth}/>
         <Route path='/cart' component={Cart}/>
         <Route path='/packages' component={Packages}/>
+        <Route path='/checkout' component={Checkout}/>
     </Switch>
 )

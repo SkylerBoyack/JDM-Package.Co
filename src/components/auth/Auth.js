@@ -10,6 +10,7 @@ const Auth = (props) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     
+    
     const dispatch = useDispatch()
     const handleRegister = () => {
         axios.post('/auth/register',{email, password})
@@ -26,11 +27,11 @@ const Auth = (props) => {
     const handleLogin = () => {
         axios.post('/auth/login', {email, password})
         .then((res) => {
-            console.log(res.data)
+            console.log(res.data, 'logged in')
             dispatch(setUser(res.data))
             axios.get('/api/cart').then((response) => {
                 dispatch(setCart(response.data))
-                props.history.push('/')
+                props.history.push('/packages')
             })
         })
         .catch(err => console.log(err))
@@ -41,15 +42,14 @@ const Auth = (props) => {
                 <h1 id="CreateOr">Create Account or Login</h1>
             <div className='auth-input-box'>
                <h3 id="inputText">Email</h3>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email"/>
-            
+                <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern=".+@gmail.com" size="30" required/>
               <h3 id="inputText">Password</h3>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password"/>
             </div>
 
             <div className='auth-button-container'>
             <button className="auth-button" onClick={handleRegister}><h4 id="loginReg">Sign Up</h4></button>
-            <button className="auth-button" onClick={handleLogin}><h4 id="loginReg">Login</h4></button>
+            <button className="auth-button" onClick={handleLogin} ><h4 id="loginReg">Login</h4></button>
             </div>
 
             </div>
