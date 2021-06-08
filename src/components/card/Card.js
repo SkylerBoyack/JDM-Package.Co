@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import '../card/Card.css'
+import '../card/Card.scss'
 
 
 class Card extends Component {

@@ -1,0 +1,31 @@
+$font: Arial,Verdana,sans-serif;
+$primary-color: #FFFFFF;
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    "bold": 700
+);
+
+body {
+    background-color: $primary-color;
+     font-weight: map-get($font-weights, medium);
+}
+
+@mixin flexCenter($direct) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:$direct;
+}
+
+@mixin flexCenterStart {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin size-100{
+    width: 100%;
+    height: 100vh;
+}
+

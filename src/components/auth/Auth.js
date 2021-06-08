@@ -3,7 +3,7 @@ import axios from 'axios'
 import {setUser} from '../../redux/authReducer'
 import {setCart} from '../../redux/cartReducer'
 import {useDispatch} from 'react-redux'
-import '../auth/Auth.css'
+import '../auth/Auth.scss'
 
 
 const Auth = (props) => {
@@ -31,7 +31,7 @@ const Auth = (props) => {
             dispatch(setUser(res.data))
             axios.get('/api/cart').then((response) => {
                 dispatch(setCart(response.data))
-                props.history.push('/packages')
+                props.history.push('/')
             })
         })
         .catch(err => console.log(err))
@@ -44,7 +44,7 @@ const Auth = (props) => {
                <h3 id="inputText">Email</h3>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern=".+@gmail.com" size="30" required/>
               <h3 id="inputText">Password</h3>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password"/>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password"/>
             </div>
 
             <div className='auth-button-container'>

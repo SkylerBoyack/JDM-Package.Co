@@ -1,4 +1,4 @@
-import '../homePage/HomePage.css'
+import '../homePage/HomePage.scss'
 import {Link} from 'react-router-dom'
 import {FaFileSignature} from 'react-icons/fa'
 import {GoPackage} from 'react-icons/go'
@@ -28,7 +28,7 @@ const HomePage = () => {
                <h2 id='instText'>Select Your Package</h2>
                </div>
             <div className='inst'>
-                <h1 id='FA'><MdLocalShipping/></h1>
+                <h1 id='FA'><Link to='/cart'><h1 id='FA'><MdLocalShipping/></h1></Link></h1>
                 <h2 id='instText'>Checkout And Enjoy!</h2>
                 </div>
             </div>

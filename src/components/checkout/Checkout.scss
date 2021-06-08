@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .FormGroup {
 	margin: 0 15px 20px;
 	padding: 0;
@@ -9,9 +11,7 @@
 }
 
 .FormRow {
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-align: center;
 	align-items: center;
 	margin-left: 15px;
 	border-top: 1px solid #819efc;
@@ -43,17 +43,17 @@
 	border: none;
 }
 
-button:active {
+/* button:active {
 	background-color: purple;
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 purple;;
 	transform: scale(0.99);
-}
+} */
 
 .Checkout {
 	display: flex;
     justify-content: center;
 	background-image: url(https://wallpapercave.com/wp/wp6793772.jpg);
-	height: 100vh;
+	@include size-100;
 }
 
 .payment-container{
@@ -70,16 +70,15 @@ button:active {
 }
 
 .checkout-title{
-	font: 55px/55px Arial,Verdana,sans-serif;
+	font: 55px/55px $font;
 	border: solid black 4px;
-	border-radius: 8%;
 	color: white;
 	margin-bottom: 30px;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .package-and-amount{
-	font: 35px/35px Arial,Verdana,sans-serif;
+	font: 35px/35px $font;
 	border-bottom: solid black 3px;
 	color: white;
 
@@ -87,11 +86,11 @@ button:active {
 
 #check-button{
 	color: black;
-	font: 25px/25px Arial,Verdana,sans-serif;
+	font: 25px/25px $font;
 }
 
 #thank-you{
-	font: 25px/25px Arial,Verdana,sans-serif;
+	font: 25px/25px $font;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.5);
 	margin-bottom: 20px;
@@ -99,7 +98,7 @@ button:active {
 }
 
 .go-home{
-	font: 35px/35px Arial,Verdana,sans-serif;
+	font: 35px/35px $font;
 	color: white;
 	border: black solid 3px;
 	background-color: rgba(0, 0, 0, 0.5);

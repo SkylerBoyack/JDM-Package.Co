@@ -18,43 +18,40 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+@import '../../scss/variables.scss';
+
+
+
 .hH3{
     color:black;
-    font: 25px/25px Arial,Verdana,sans-serif;
+    font: 25px/25px $font;
 }
   
 .hH1{
     color:black;
-    font: 35px/35px Arial,Verdana,sans-serif;
+    font: 35px/35px $font;
 }
 .hH12{
     color:black;
-    font: 35px/35px Arial,Verdana,sans-serif;
+    font: 35px/35px $font;
 }
 
-.hH3:hover, .hH3:focus {
+.hH3:hover{
     color:purple;
 }
   
-.hH1:hover, .hH1:focus {
-    color:purple;
+.hH1:hover{
+    @extend .hH3:hover
 }
 
   
-h1{
-    font: 35px/35px Arial,Verdana,sans-serif;
-}
-
 #GR{
     color:black;
 }
 
 header{
-    display: flex;
+    @include flexCenter(row);
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:  center;
-    align-items: center;
     width: 100%;
     height: 10vh;
     background-color:white;
@@ -89,7 +86,7 @@ header{
 .auth-button-logout{
     border: none;
     background-color: white;
-    font: 25px/25px Arial,Verdana,sans-serif;
+    font: 25px/25px $font;
 }
 
 .auth-button-logout:hover, .auth-button-logout:focus {
@@ -109,10 +106,7 @@ header{
         display: none;
     }
     .header-drop{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flexCenter(column);
         /* background-color: blue; */
         width: 100%;
     }

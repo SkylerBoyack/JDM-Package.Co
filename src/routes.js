@@ -3,7 +3,7 @@ import Auth from './components/auth/Auth'
 import Cart from './components/cart/Cart'
 import homePage from './components/homePage/HomePage'
 import Packages from './components/packages/Packages'
-import Checkout from './components/stripe/Checkout'
+import Checkout from './components/checkout/Checkout'
 
 
 

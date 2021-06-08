@@ -1,15 +1,11 @@
-
+@import '../../scss/variables.scss';
 
 #cart-container{
     width: 100%;
-    height: 92.6vh;
-    background-color:  white;
+    height: 92.8vh;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flexCenterStart;
     flex-direction: row;
-    color: white;
     margin-top:70px;
     background-image: url(https://wallpaperaccess.com/full/58015.jpg);
 }
@@ -21,10 +17,7 @@
     border: solid #393E41 4px;
     width: 350px;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(column);
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -43,12 +36,8 @@
     border-bottom: solid black  2px;
 }
 
-#itemQty{
-    border-bottom: solid black  2px;  
-}
-
 #cart-button{
-    font: 20px/20px Arial,Verdana,sans-serif;
+    font: 20px/20px $font;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
@@ -56,15 +45,13 @@
 
 .cart-items{
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    @include flexCenter(row);
     color: white;
     margin-top: 25vh;
 }
 
 #cart-text{
+    color:white;
     margin-top: 80px;
     border: solid white 1px;
     border-radius: 10px;
@@ -76,7 +63,7 @@
 }
 
 .checkout-link{
-    font: 20px/20px Arial,Verdana,sans-serif;
+    font: 20px/20px $font;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;

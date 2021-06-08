@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import axios from 'axios'
 import {useSelector, useDispatch} from 'react-redux'
 import {setCart} from '../../redux/cartReducer'
-import '../packages/Packages.css'
+import '../packages/Packages.scss'
 
 const Packages = (props) => {
   const [packages, setPackages] = useState([])
@@ -24,6 +24,7 @@ const Packages = (props) => {
       if(!packageBox){
           axios.post(`/api/cart/${package_id}`)
           .then((res) => {
+              console.log(res.data)
               dispatch(setCart(res.data))
               alert('Item added to cart!')
           })

@@ -1,4 +1,4 @@
-import '../header/Header.css'
+import '../header/Header.scss'
 import {RiShoppingCartLine} from 'react-icons/ri'
 import Card from '../card/Card'
 import axios from 'axios'

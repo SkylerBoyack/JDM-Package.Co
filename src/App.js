@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import routes from './routes';
 import Header from './components/header/Header'
 

@@ -2,7 +2,7 @@ import { useEffect} from 'react'
 import axios from 'axios'
 import {useSelector, useDispatch} from 'react-redux'
 import {setCart} from '../../redux/cartReducer'
-import '../cart/Cart.css'
+import '../cart/Cart.scss'
 import {Link} from 'react-router-dom'
 
 const Cart = (props) => {
@@ -62,7 +62,7 @@ const Cart = (props) => {
                     <div id="cart">
                         <h1 id="packCart">Package</h1>
                         <h2 id="items">{item.package_name}</h2>
-                        <h3 id="itemQty">Qty: {item.quantity}</h3>
+                        <h3 id="items">Qty: {item.quantity}</h3>
                         <div id="qtyButtons">
                         <button id="cart-button" onClick={() => handleChangeQty(item.package_id, item.quantity -1)}>-</button>
                         <button id="cart-button" onClick={() => handleChangeQty(item.package_id, item.quantity +1)}>+</button>

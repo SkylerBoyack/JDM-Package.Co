@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 const CARD_OPTIONS = {
 	iconStyle: "solid",
@@ -10,7 +11,7 @@ const CARD_OPTIONS = {
 			iconColor: "#c4f0ff",
 			color: "#fff",
 			fontWeight: 500,
-			fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
+			fontFamily: "Arial,Verdana,sans-serif",
 			fontSize: "16px",
 			fontSmoothing: "antialiased",
 			":-webkit-autofill": { color: "#fce883" },
@@ -27,6 +28,7 @@ export default function PaymentForm() {
     const [success, setSuccess ] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
+    const {cart} = useSelector((store) => store.cartReducer)
 
 
     const handleSubmit = async (e) => {
@@ -39,9 +41,12 @@ export default function PaymentForm() {
         console.log(handleSubmit)
     if(!error) {
         try {
+            const total = cart.reduce((acc, el) => {
+                return acc + el.package_price * el.quantity
+            }, 0)
             const {id} = paymentMethod
             const response = await axios.post("http://localhost:4222/payment", {
-                amount: 100,
+                amount: total * 100,
                 id
             })
 
@@ -71,7 +76,7 @@ export default function PaymentForm() {
         </form>
         :
        <div>
-           <h2 id="thank-you">Thank you for shopping at JDM Package.Co!</h2>
+           <h2 id="thank-you">Thank you for your purchase!</h2>
            <Link to='/'><h1 className="go-home">HomePage</h1></Link>
        </div> 
         }

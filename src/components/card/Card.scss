@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 #hamburger{
     border: 0px;
     background-color: white;
@@ -17,7 +19,7 @@
 
 .cardText{
     color: black;
-    font: 25px/25px Arial,Verdana,sans-serif;
+    font: 25px/25px $font;
     
 }
 

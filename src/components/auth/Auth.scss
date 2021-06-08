@@ -1,11 +1,10 @@
+@import '../../scss/variables.scss';
+
 .Login{
-    width: 100vw;
-    height: 100vh;
+    @include size-100;
     background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/10/50386/01252c960fc961a7bc6c8cbd51c2d1d8.jpg);
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(none);
     color: white;
    
 }
@@ -16,10 +15,7 @@
     /* background-image: linear-gradient(97deg, #F7EBE8 , #444140 ); */
     width: 20vw;
     height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(column);
     position: relative;
 }
 
@@ -34,7 +30,7 @@ input{
 }
 
 #inputText{
-  font: 20px/20px Arial,Verdana,sans-serif;
+  font: 20px/20px $font;
 }
 
 .auth-button-container {
@@ -52,13 +48,17 @@ input{
   background-color: rgba(0, 0, 0, 0.05);
  }
 
+ .auth-button:hover, .auth-button:focus{
+    cursor: pointer;
+ }
+
  #loginReg{
    color: white;
-   font: 15px/15px Arial,Verdana,sans-serif;
+   font: 15px/15px $font;
  }
  
  #CreateOr{
-  font: 30px/30px Arial,Verdana,sans-serif;
+  font: 30px/30px $font;
   margin-bottom: 30px;
  }
 
@@ -66,10 +66,10 @@ input{
  @media(max-width: 992px){
   .Login{
     background-image: linear-gradient(99deg, #FFFFFF, #4A525A 30%, #24272B 73%, #07070A);
-
   }
   .Login-container{
     width: fit-content;
     height: fit-content;
   }
 }
+
