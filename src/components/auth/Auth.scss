@@ -1,4 +1,6 @@
 @import '../../scss/variables.scss';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 
 .Login{
     @include size-100;
@@ -11,18 +13,18 @@
 
 .Login-container{
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
     /* background-image: linear-gradient(97deg, #F7EBE8 , #444140 ); */
-    width: 20vw;
-    height: 40vh;
+    width: 25vw;
+    height: 45vh;
     @include flexCenter(column);
     position: relative;
 }
 
 .auth-input-box  {
-  display: flex;
-  flex-direction: column;
+  @include flexCenter(column);
   margin-bottom: 5px;
+  height: 200px;
 }
 
 input{
@@ -34,18 +36,31 @@ input{
 }
 
 .auth-button-container {
-  display: flex;
-  justify-content: center;
+  @include flexCenter(none);
   width: 55%;
   height: 35px;
-  margin-left: 10px;
   border: none;
  } 
 
  .auth-button{
-   margin-left: 15px;
-   margin-right: 25px;
-  background-color: rgba(0, 0, 0, 0.05);
+   background-color: rgba(0, 0, 0, 0.6);
+   color: white;
+   margin-right: 5px;
+ }
+
+ #noAcc{
+  background-color: rgba(0, 0, 0, 0.3);
+   border: none;
+   color: white;
+   font: 20px/20px $font;
+ }
+ #noAcc:hover{
+  color: purple;
+  cursor: pointer;
+ }
+
+ #auth-input{
+  font: 15px/15px $font;
  }
 
  .auth-button:hover, .auth-button:focus{
@@ -54,11 +69,17 @@ input{
 
  #loginReg{
    color: white;
-   font: 15px/15px $font;
+   font: 18px/18px $font;
+   padding: 5px;
+ }
+ #loginReg-2{
+   color: white;
+   font: 18px/18px $font;
+   padding: 5px;
  }
  
  #CreateOr{
-  font: 30px/30px $font;
+  font: 35px/35px $font;
   margin-bottom: 30px;
  }
 
@@ -73,3 +94,24 @@ input{
   }
 }
 
+.input-container {
+  width: 60%;
+  margin: 50px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.input-container input {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  color: #333;
+}
+i {
+  margin: 0 10px;
+  color: #aaa;
+  cursor: default;
+}

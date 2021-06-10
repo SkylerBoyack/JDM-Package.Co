@@ -50,15 +50,19 @@
 } */
 
 .Checkout {
-	display: flex;
-    justify-content: center;
+	@include flexCenter(none);
 	background-image: url(https://wallpapercave.com/wp/wp6793772.jpg);
-	@include size-100;
+	@include size-100	;
+}
+
+.price-total{
+ 	color: white;
+	 font: 35px/35px $font;
+	 background-color: rgba(0, 0, 0, 0.5);
 }
 
 .payment-container{
-    margin-top: 25vh;
-	background-color: rgba(0, 0, 0, 0) ;
+	background-color: rgba(0, 0, 0, 0.5);
     width: 600px;
     height: 400px;
 }
@@ -71,17 +75,15 @@
 
 .checkout-title{
 	font: 55px/55px $font;
-	border: solid black 4px;
+	border: solid black 3px;
 	color: white;
 	margin-bottom: 30px;
-	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .package-and-amount{
 	font: 35px/35px $font;
 	border-bottom: solid black 3px;
 	color: white;
-
 }
 
 #check-button{

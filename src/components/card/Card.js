@@ -7,30 +7,32 @@ import '../card/Card.scss'
 class Card extends Component {
   constructor() {
     super();
-    
+
     this.state = {
-      showMenu: false,
-    }
-    
+      showMenu: false
+    };
+
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
   }
-  
+
   showMenu(event) {
     event.preventDefault();
-    
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
+
+    this.setState({
+      showMenu: true
     });
+
+    document.addEventListener("click", this.closeMenu);
   }
 
   closeMenu(event) {
     if (this.dropdownMenu.contains(event.target)) {
-      
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeMenu);
-      });  
-      
+      this.setState({
+        showMenu: false
+      });
+
+      document.removeEventListener("click", this.closeMenu);
     }
   }
 
@@ -64,3 +66,8 @@ class Card extends Component {
 }
 
 export default Card
+
+// <Link to='/'><h3 className="cardText">Home</h3></Link>
+// <Link to='/auth'><h3 className="cardText">Login</h3></Link>
+// <Link to='/packages'><h3 className="cardText">Packages</h3></Link>
+// <Link to='/cart'><h3 className="cardText">Cart</h3></Link>

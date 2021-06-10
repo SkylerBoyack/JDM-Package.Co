@@ -16,6 +16,7 @@
 
 #ava{
   color: #000;
+  font: 50px/50px $font;
 }
 
 .Avalible-Packages{
@@ -34,7 +35,7 @@
     height: 270px;
     @include flexCenter(column);
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #packagesType{
@@ -46,10 +47,10 @@
 
 #packages{
     padding: 15px;
-    font: 20px/20px $font;
+    font: 23px/23px $font;
     color: white;
     font-weight: 600;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 #ava{

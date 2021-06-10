@@ -55,10 +55,10 @@ const Packages = (props) => {
            {packages.map((packageBox) => {
                return(
                    <div className="Packs" key={packageBox.package_id}>
-                       <h2 id="packagesType">{packageBox.package_name}</h2>
+                       <h2 id="packagesType" style={{background: '#46083b99'}}>{packageBox.package_name}</h2>
                        <h3 id="packages">{packageBox.package_info}</h3>
-                       <h4 id="packages">Includes: {packageBox.package_items} surpirse items</h4>
-                       <h4 id="packages"> Price: ${packageBox.package_price}</h4>
+                       <h3 id="packages">Includes: {packageBox.package_items} surpirse items</h3>
+                       <h3 id="packages"> Price: ${packageBox.package_price}</h3>
                        {user && <button onClick={() => handleAddToCart(packageBox.package_id)}>Add Package Cart</button>}
                    </div>
                )

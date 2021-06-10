@@ -3,6 +3,7 @@ import axios from "axios"
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+import userEvent from "@testing-library/user-event"
 
 const CARD_OPTIONS = {
 	iconStyle: "solid",
@@ -29,13 +30,14 @@ export default function PaymentForm() {
     const stripe = useStripe()
     const elements = useElements()
     const {cart} = useSelector((store) => store.cartReducer)
+ 
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const {error, paymentMethod} = await stripe.createPaymentMethod({
             type: "card",
-            card: elements.getElement(CardElement)
+            card: elements.getElement(CardElement),
         })
 
         console.log(handleSubmit)
@@ -44,10 +46,11 @@ export default function PaymentForm() {
             const total = cart.reduce((acc, el) => {
                 return acc + el.package_price * el.quantity
             }, 0)
+
             const {id} = paymentMethod
             const response = await axios.post("http://localhost:4222/payment", {
                 amount: total * 100,
-                id
+                id,
             })
 
             if(response.data.success) {
@@ -84,3 +87,4 @@ export default function PaymentForm() {
         </>
     )
 }
+

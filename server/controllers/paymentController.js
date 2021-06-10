@@ -4,14 +4,14 @@ const stripe = require("stripe")(process.env.SESSION_SECRET)
 
 module.exports = {
     addPayment: async (req, res) => {
-        let { amount, id } = req.body
+        let { amount, id} = req.body
         try {
             const payment = await stripe.paymentIntents.create({
                 amount,
                 currency: "USD",
                 description: "JDM Package.Co",
                 payment_method: id,
-                confirm: true
+                confirm: true,
             })
             console.log("Payment", payment)
             res.json({
