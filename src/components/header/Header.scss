@@ -49,6 +49,7 @@ time, mark, audio, video {
     color:black;
 }
 
+
 header{
     @include flexCenter(row);
     flex-direction: row;
@@ -67,12 +68,34 @@ header{
     width: 100vw;
 }
 
-.header-drop{
-    position: absolute;
-    overflow: hidden;
+.DropDown{
+    font: 20px/20px $font;
     display: none;
-    right: 5px;
-    bottom: 0px;
+}
+
+#drop-item{
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 100vw;
+    @include flexCenter(row);
+    position: relative;
+}
+
+#drop-item:hover{
+    color: purple;
+    cursor: pointer;
+}
+
+#dropdown-basic-button{
+    padding: 5px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+#ham-icon{
+    padding: 4px;
+    width: 30px;
 }
 
 .header-logged-in{
@@ -99,16 +122,18 @@ header{
     button{
       display: block;
     }
+
     .header-main{
       display:none
     }
     .header-logged-in{
         display: none;
     }
-    .header-drop{
+    .DropDown{
         @include flexCenter(column);
         /* background-color: blue; */
         width: 100%;
+        // background-color: red;
     }
    
   }

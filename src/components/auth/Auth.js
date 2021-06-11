@@ -65,7 +65,7 @@ const Auth = (props) => {
         <div className='Login-container'>
            <h1 id="CreateOr">Create Account</h1>
               <form className="auth-input-box" onSubmit={handleRegister}>
-                <input id="auth-input" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern="+@gmail.com" required/>
+                <input id="auth-input" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern="@gmail.com" required/>
                 <input  id="auth-input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password" required/>
                  <button  className="auth-button"><h4 id="loginReg">Sign Up</h4></button>
              </form>    
