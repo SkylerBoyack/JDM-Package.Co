@@ -28,7 +28,7 @@ function Checkout() {
                   </div>)
               })}</h3> 
 
-              <img id='checkout-pic' src="https://s.clipartkey.com/mpngs/s/61-612960_package-clipart-package-black-and-white.png" alt="package-picture" />
+              <img id='checkout-pic' src="https://s.clipartkey.com/mpngs/s/61-612960_package-clipart-package-black-and-white.png" alt="package-pic" />
             <h2 className='price-total'>Total ${total}</h2>
            <button id='check-button' onClick={() => setShowItem(true)}>Confirm Order</button></>}
         </div>

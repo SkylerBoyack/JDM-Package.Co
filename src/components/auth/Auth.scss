@@ -8,7 +8,9 @@
     position: absolute;
     @include flexCenter(none);
     color: white;
-   
+}
+.register{
+  @extend .Login
 }
 
 .Login-container{
@@ -19,6 +21,9 @@
     height: 45vh;
     @include flexCenter(column);
     position: relative;
+}
+.register-container{
+  @extend .Login-container
 }
 
 .auth-input-box  {
@@ -59,7 +64,10 @@ input{
   cursor: pointer;
  }
 
- #auth-input{
+input{
+  font: 15px/15px $font;
+ }
+ #auth-input-1{
   font: 15px/15px $font;
  }
 

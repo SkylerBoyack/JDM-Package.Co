@@ -26,7 +26,7 @@ const Packages = (props) => {
           .then((res) => {
               console.log(res.data)
               dispatch(setCart(res.data))
-              alert('Item added to cart!')
+              alert('Item Added To Cart')
           })
           .catch((err) => {
               console.log(err)

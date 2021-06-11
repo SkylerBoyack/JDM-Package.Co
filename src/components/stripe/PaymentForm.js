@@ -2,8 +2,9 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
-import {useSelector} from 'react-redux'
-import userEvent from "@testing-library/user-event"
+import { useSelector, useDispatch} from 'react-redux'
+
+
 
 const CARD_OPTIONS = {
 	iconStyle: "solid",
@@ -30,8 +31,6 @@ export default function PaymentForm() {
     const stripe = useStripe()
     const elements = useElements()
     const {cart} = useSelector((store) => store.cartReducer)
- 
-
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -56,8 +55,10 @@ export default function PaymentForm() {
             if(response.data.success) {
                 console.log("Successful payment")
                 setSuccess(true)
+                
             }
-
+            
+            
         } catch (error) {
             console.log("Error", error)
         }
@@ -65,7 +66,9 @@ export default function PaymentForm() {
         console.log(error.message)
     }
 }
-    
+
+
+
     return (
         <>
         {!success ? 
@@ -78,12 +81,11 @@ export default function PaymentForm() {
             <button id="check-button">Pay Now</button>
         </form>
         :
-       <div>
+       <div >
            <h2 id="thank-you">Thank you for your purchase!</h2>
            <Link to='/'><h1 className="go-home">HomePage</h1></Link>
        </div> 
-        }
-            
+        } 
         </>
     )
 }

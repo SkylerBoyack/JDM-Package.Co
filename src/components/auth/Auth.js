@@ -12,7 +12,8 @@ const Auth = (props) => {
     const [showLogin, setShowLogin] = useState(false)
     const dispatch = useDispatch()
     
-    const handleRegister = () => {
+    const handleRegister = (e) => {
+        e.preventDefault()
         axios.post('/auth/register',{email, password})
         .then((res) => {
             dispatch(setUser(res.data))
@@ -25,7 +26,8 @@ const Auth = (props) => {
         
         .catch(err => alert(err.response.data))
     }
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault()
         axios.post('/auth/login', {email, password})
         .then((res) => {
             console.log(res.data, 'logged in')
@@ -44,15 +46,15 @@ const Auth = (props) => {
     const LoginFalse = () => {
         setShowLogin(false)
     }
-
+    
     if(!showLogin)return(
     <div className='Login'>
      <div className='Login-container'>
         <h1 id="CreateOr">Login</h1>
            <form className="auth-input-box" onSubmit={handleLogin}>
-             <input id="auth-input" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern="+@gmail.com" required/>
-             <input id="auth-input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password" required/>
-              <button  className="auth-button"><h4 id="loginReg">Login</h4></button>
+             <input  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email"  required/>
+             <input  value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password" required/>
+              <button className="auth-button"><h4 id="loginReg">Login</h4></button>
           </form>    
           <div>
             <button id='noAcc' onClick={LoginTrue}>Don't have an account? Sign up</button>
@@ -61,13 +63,13 @@ const Auth = (props) => {
     </div>
     )
     if(showLogin)return(
-        <div className='Login'>
+        <div className='register'>
         <div className='Login-container'>
            <h1 id="CreateOr">Create Account</h1>
               <form className="auth-input-box" onSubmit={handleRegister}>
-                <input id="auth-input" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" pattern="@gmail.com" required/>
-                <input  id="auth-input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password" required/>
-                 <button  className="auth-button"><h4 id="loginReg">Sign Up</h4></button>
+                <input  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" type="email" required/>
+                <input  value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" type="password" required/>
+                 <button className="auth-button"><h4 id="loginReg">Sign Up</h4></button>
              </form>    
               <div>
               <button  id='noAcc' onClick={LoginFalse}>Already a subscriber? Sign in</button>
