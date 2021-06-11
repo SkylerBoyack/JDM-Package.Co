@@ -193,32 +193,65 @@ img{
   #extra {
     color:blue;
   }
- 
-@media(max-width: 700px){
+  @media(max-width: 1327px){   
+      .exampImg{
+          height: fit-content;
+        }
+    }
+    
+   @media(max-width: 700px){
+       .info
+       {
+         background-image: none;
+         background-color: #6D696A;
+         height: 50vh;
+       }
+       .HowItWorks{
+         background-image: none;
+         background-color: #A2A7A5;
+         height: fit-content;
+       }
+       .examp-container{
+           background-image: none;
+           background-color: #6D696A;
+           height: fit-content;
+       }
+       
+       .exampImg{
+           height: fit-content;
+       }
+    
+   }
+   @media(max-width: 375px){
     .info
     {
       background-image: none;
       background-color: #6D696A;
       height: 50vh;
+      width: 100%;
     }
     .HowItWorks{
       background-image: none;
       background-color: #A2A7A5;
       height: fit-content;
+      width: 100%;
+    }
+    .Instruc-container{
+        background-image: none;
+        background-color: #A2A7A5;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
     }
     .examp-container{
         background-image: none;
         background-color: #6D696A;
         height: fit-content;
+        width: 100%;
     }
     
     .exampImg{
         height: fit-content;
-    }
- 
-}
-@media(max-width: 1327px){   
-    .exampImg{
-        height: fit-content;
+        width: 100%;
     }
 }
