@@ -6,21 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import {HashRouter} from 'react-router-dom'
 import store from './redux/store'
-import { Elements } from "@stripe/react-stripe-js"
-import { loadStripe } from "@stripe/stripe-js"
 
-const PUBLIC_KEY = "pk_test_rgWMA3zxjAtwaB6iV8b5W40x"
-
-const stripeTestPromise = loadStripe(PUBLIC_KEY)
 
 ReactDOM.render(
   <React.StrictMode>
    <Provider store={store}>
-   <Elements stripe={stripeTestPromise}>
     <HashRouter>
       <App />
     </HashRouter>
-    </Elements>
    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
