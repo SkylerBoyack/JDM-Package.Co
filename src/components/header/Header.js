@@ -29,9 +29,9 @@ const Header = () => {
         <header>     
           <div className="header-main">
             <Link to='/'><h1 className="hH1">JDM Package.Co</h1></Link>
-            <Link to='/auth' ><h3 className="hH3">Login</h3></Link>
             <Link to='/packages'><h3 className="hH3">Packages</h3></Link>
             <Link to='/cart'><h2 id='GR'><RiShoppingCartLine /></h2></Link>
+            <Link to='/auth' ><h3 className="hH3">Login</h3></Link>
         </div>
          
           <div className="DropDown">
@@ -51,18 +51,18 @@ const Header = () => {
 
       <div className="header-logged-in">
         <Link to='/'><h1 className="hH1">JDM Package.Co</h1></Link>
-        <button className="auth-button-logout" onClick={handleLogout}><h4 id="logout">Logout</h4></button>
         <Link to='/packages'><h3 className="hH3">Packages</h3></Link>
         <Link to='/cart'><h2 id='GR'><RiShoppingCartLine /></h2></Link>
+        <button className="auth-button-logout" onClick={handleLogout}><h4 id="logout">Logout</h4></button>
     </div> 
  
     <div className="DropDown">
         <h1 className="hH12">JDM Package.Co</h1>
          <DropdownButton id="dropdown-basic-button" title={<h2     id="ham-icon"><GiHamburgerMenu/></h2>}>
             <Dropdown.Item id='drop-item' as={Link} to="/">Home</Dropdown.Item>
-            <Dropdown.Item id='drop-item' onClick={handleLogout}>Logout</Dropdown.Item>
             <Dropdown.Item id='drop-item' as={Link} to="/packages">Packages</Dropdown.Item>
             <Dropdown.Item id='drop-item' as={Link} to="/cart">Cart</Dropdown.Item>
+            <Dropdown.Item id='drop-item' onClick={handleLogout}>Logout</Dropdown.Item>
         </DropdownButton>
        </div>
 
