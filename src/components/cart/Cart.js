@@ -61,11 +61,11 @@ const Cart = (props) => {
                         <button id="cart-button" onClick={() => handleChangeQty(item.package_id, item.quantity +1)}>+</button>
                         </div>
                         <button id="cart-button" onClick={() => handleDeleteFromCart(item.package_id)}>Remove Package</button>
-                        <Link to='/checkout'><h3 className="checkout-link">Checkout</h3></Link>
                     </div>
                 </div>
                  )
                 })}
+                <Link to='/checkout'><h3 className="checkout-link">Checkout</h3></Link>
              </div>
         </div>
 
